@@ -1,0 +1,18 @@
+server:
+  port: 8080
+bones:
+  hazelcast-config-file: ""
+  hazelcast:
+    instanceName: "hazelcast-instance"
+    quorum: 1
+    map:
+      name: "configuration"
+      max-size-policy:
+        policy: "FREE_HEAP_SIZE"
+        value: 200
+    group:
+      name: "bones-sessions"
+      password: "changeit"
+      multicast-port: 54327
+
+
